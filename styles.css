@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue";
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
