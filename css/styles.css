@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue";
+  background-color: white;
+  font-size: 1rem;
+  color: black;
+  margin: 0;
+}
+
+header h1 {
+  margin: 10px 25px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(100, 100, 100, 0.8);
+}
+
+/* Modal */
+
+#modalInfo {
+  background-color: white;
+  text-align: center;
+  padding: 2em 2em;
+  width: 80vw;
+  margin: 20vh auto;
+  border-radius: 5px;
+}
+
+#modalClose {
+  font-size: 2em;
+  display: block;
+  float: right;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  border-radius: 50%;
+  min-height: 75px;
+}
+
+#employeeProfiles {
+  display: grid;
+  margin: 30px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.employeeInfo {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 20px 20px 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 20px;
+  padding: 15px;
+  padding-bottom: 30px;
+}
+
+#employeeEmail,
+#employeeCity,
+#employeePhone,
+#employeeAddress,
+#employeeBirthday {
+  font-weight: 200;
+}
+
+.employeeName,
+.email,
+.city {
+  font-size: 0.75em;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+@media (min-width: 1024px) {
+  #modalInfo {
+    width: 40vw;
+  }
+
+  #employeeProfiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 25px;
+    margin: 25px;
+  }
+
+  .employeeInfo {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 20px 20px 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 30px;
+  }
+}
