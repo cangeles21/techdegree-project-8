@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Employee Directory</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">    
+  </head>
     <body>
-      
       <header>
         <h1>Awesome Startup Employee Directory</h1>
-        <div class="inputSearch">
-          <input type="search" placeholder="Search a name..." id="searchBar">
-        </div>
       </header>
-
       <main>
         <div id="employeeProfiles"></div>
       </main>
-
       <div id="overlay" class="hidden">
         <div class="modal">
           <div id="modalInfo">
@@ -26,8 +23,6 @@
             <h3 id="employeeName"></h3>
             <p id="employeeEmail"></p>
             <p id="employeeCity"></p>
-            <button type="button" id="modalBack">&larr;</button>
-            <button type="button" id="modalNext">&rarr;</button>
             <hr>
             <p id="employeePhone"></p>
             <p id="employeeAddress"></p>
@@ -35,7 +30,6 @@
           </div>
         </div>
       </div>
-
       <script src="js/app.js"></script>
     </body>
 </html>

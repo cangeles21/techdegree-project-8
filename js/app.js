@@ -3,10 +3,8 @@ const randomUser = 'https://randomuser.me/api/?results=12';
 const employeeContainer = document.getElementById('employeeProfiles');
 const profileDivs = document.getElementsByClassName('employeeInfo');
 const closeBtn = document.getElementById('modalClose');
-const backBtn = document.getElementById('modalBack');
-const nextBtn = document.getElementById('modalNext');
-let currentIndex;
-
+// const backBtn = document.getElementById('modalBack');
+// const nextBtn = document.getElementById('modalNext');
 const overlay = document.getElementById('overlay');
 let employees = [];
 
@@ -38,16 +36,15 @@ function generateEmployeeProfile(json) {
 			<p class="email">${email}</p>
 			<p class="city">${city}</p>
 			`;
-
 		profile.addEventListener('click', () => {
 			overlay.classList.remove('hidden');
 			let profileImg = document.getElementById('employeePic');
 			let name = document.getElementById('employeeName');
-			let address = document.getElementById('employeeAddress');
-			let employeeCity = document.getElementById('employeeCity');
 			let employeeEmail = document.getElementById('employeeEmail');
-			let dob = document.getElementById('employeeBirthday');
+			let employeeCity = document.getElementById('employeeCity');
 			let cellPhone = document.getElementById('employeePhone');
+			let address = document.getElementById('employeeAddress');
+			let dob = document.getElementById('employeeBirthday');
 			let birthday = new Date(employees[index].dob.date);
 
 			profileImg.src = employee.picture.large
@@ -61,33 +58,9 @@ function generateEmployeeProfile(json) {
 		});
 	};
 
-
-
 	closeBtn.addEventListener('click', () => {
 		overlay.classList.add('hidden');
 	});
-
-	nextBtn.addEventListener('click', () => {
-        if (currentIndex <= 10) {
-            currentIndex++
-        }
-        else {
-            currentIndex = 0
-        }
-		empployeeContainer(currentIndex);
-	});
-	
-	backBtn.addEventListener('click', () => {
-        if (currentIndex >=1) {
-            currentIndex--
-        }
-        else {
-            currentIndex = 11
-        }
-		(currentIndex);
-	});
-
-
 
 fetchRandomUser(randomUser);
 
