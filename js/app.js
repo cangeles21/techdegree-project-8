@@ -11,14 +11,14 @@ let employees = [];
 // fetch data
 function fetchRandomUser(url) {
 	fetch(url)
-		.then(response => response.json())
+		.then(res => res.json())
 		.then(userJSON => userJSON.results)
-		.then(generateEmployeeProfile)
+		.then(displayEmployees)
 		.catch(e => console.log(e))
 };
 
-// generate employee profiles
-function generateEmployeeProfile(json) {
+// display employee profiles
+function displayEmployees(json) {
 	employees = json;
 
 	employees.forEach((employee, index) => {
@@ -47,19 +47,19 @@ function generateEmployeeProfile(json) {
 			let dob = document.getElementById('employeeBirthday');
 			let birthday = new Date(employees[index].dob.date);
 
-			profileImg.src = employee.picture.large
-			name.innerHTML = employee.name.first + ' ' + employee.name.last;
-			employeeCity.innerHTML = employee.location.city
-			address.innerHTML = employee.location.street.number + ' ' + employee.location.street.name + ' ' + employee.location.city + ', ' + employee.location.state + ' ' + employee.location.postcode;
-			employeeEmail.innerHTML = employee.email
-			dob.innerHTML = birthday.getMonth() + '/' + birthday.getDate() + '/' + birthday.getFullYear()
-			cellPhone.innerHTML = employee.cell
-			});
+				profileImg.src = employee.picture.large
+				name.innerHTML = employee.name.first + ' ' + employee.name.last;
+				employeeCity.innerHTML = employee.location.city
+				address.innerHTML = employee.location.street.number + ' ' + employee.location.street.name + ' ' + employee.location.city + ', ' + employee.location.state + ' ' + employee.location.postcode;
+				employeeEmail.innerHTML = employee.email
+				dob.innerHTML = birthday.getMonth() + '/' + birthday.getDate() + '/' + birthday.getFullYear()
+				cellPhone.innerHTML = employee.cell
+				});
 		});
 	};
 
 	closeBtn.addEventListener('click', () => {
-		overlay.classList.add('hidden');
+	overlay.classList.add('hidden');
 	});
 
 fetchRandomUser(randomUser);
