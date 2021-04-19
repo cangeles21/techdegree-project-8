@@ -4,7 +4,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: white;
+  background-color: #83c5be;
   font-size: 1rem;
   color: black;
   margin: 0;
@@ -26,12 +26,12 @@ header h1 {
 /* Modal */
 
 #modalInfo {
-  background-color: white;
+  background: rgba(127, 226, 226, 0.8);
   text-align: center;
   padding: 2em 2em;
   width: 80vw;
   margin: 20vh auto;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 #modalClose {
@@ -47,6 +47,7 @@ header h1 {
 
 img {
   border-radius: 50%;
+  border: 2px solid #0f4c5f;
   min-height: 90px;
 }
 
@@ -106,9 +107,10 @@ img {
 
   .employeeInfo {
     display: grid;
+    background-color: #2e6e74;
     grid-template-columns: 100px 1fr;
     grid-template-rows: 20px 20px 20px;
-    border: 2px solid #ccc;
+    border: 3px solid #006d77;
     border-radius: 10px;
     padding: 15px;
     padding-bottom: 30px;
